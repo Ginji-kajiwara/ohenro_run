@@ -3,6 +3,9 @@
 ## 画面遷移図URL
 https://www.figma.com/file/iHe6eMo0UjlzPVOaaAWrEc/OHENRO_RUN-%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7?type=design&mode=dev&t=lWnH3WirYv3GAy54-1
 
+## ER図
+https://i.gyazo.com/59dae3e079563628a52627a50fcee9be.png
+
 ## サービス概要
 ランニング・ウォーキングを記録しながら、四国のお遍路巡りが体験できる運動継続補助アプリです。
 
