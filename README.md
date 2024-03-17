@@ -1,24 +1,43 @@
-# README
+# [ohenro_run]
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 画面遷移図URL
+https://www.figma.com/file/iHe6eMo0UjlzPVOaaAWrEc/OHENRO_RUN-%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7?type=design&mode=dev&t=lWnH3WirYv3GAy54-1
 
-Things you may want to cover:
+## ER図
+https://i.gyazo.com/59dae3e079563628a52627a50fcee9be.png
 
-* Ruby version
+## サービス概要
+ランニング・ウォーキングを記録しながら、四国のお遍路巡りが体験できる運動継続補助アプリです。
 
-* System dependencies
+##　想定されるユーザー層
+運動を継続したいが、なかなか続かない人。
+四国に興味がある人。
 
-* Configuration
+## サービスコンセプト
+健康のために運動を行うことは大事と分かっていても継続することは難しいです。
+継続のためには、自分が日々どれだけ積み上げてきたかを振り返れる記録が重要です。
+走った（歩いた）距離を記録し、自分の努力を振り返ることのできるサービスを作りたいと思いました。
+記録だけではモチベーションを維持しづらいと考え、私の出身でもある四国のお遍路巡りを要素として取り込むようにしました。
 
-* Database creation
+お遍路とは
+お遍路とは、讃岐（現香川県）で生まれた弘法大師・空海ゆかりの四国八十八カ所霊場を巡ること。
+弘法大師の軌跡をたどると煩悩が取り除かれ、ご利益がもたらされると言い伝えられている。
+全長約1400キロメートルのコース。
 
-* Database initialization
+自分の分身を徳島県の第1番札所からスタートさせ、記録した距離分その分身が進みます。
+記録した後に分身が今どの位置にいるか、到達した札所の紹介と合わせて表示されます。
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## 実装を予定している機能
+### MVP
+* 会員登録
+* ログイン
+* 距離投稿（ランニングかウォーキングかは選択式）
+* 位置情報機能（自分の分身が今どこにいるか見られる）グーグルマップと連携
+* 達成率表示・お遍路図鑑
+* 他ユーザーがどこにいるか見られる
+* X（twitter）投稿連携機能
 
-* Deployment instructions
-
-* ...
+### その後の機能
+* 2周目以降の特典
+* 到達した地点ごとに近くのおすすめ観光地をレコメンドする機能
