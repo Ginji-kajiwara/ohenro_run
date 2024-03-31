@@ -3,12 +3,16 @@
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <main class="px-3">
     <h1>OHENRO_RUN</h1>
-    <img src="/assets/image.png" class="img-fluid img-main">
+    <%= image_tag 'image.png', class: 'img-fluid img-main' %>
     <p class="lead">「お遍路」とは、約1200年前に弘法大師（空海）が修行した88の霊場をたどる巡礼のことです。</p>
     <p class="lead"> これは日々のランニング・ウォーキングを記録し、お遍路を擬似体験できるサービスです。</p>
     <p class="lead">
-      <a href="#" class="btn btn-lg btn-light fw-bold border-dark">Learn more</a>
-      <a href="#" class="btn btn-lg btn-light fw-bold border-dark">Learn more</a>
+      <% if current_user %>
+        <%= link_to 'ログアウト', logout_path, method: :delete, class: 'btn btn-lg btn-light fw-bold border-dark' %>
+      <% else %>
+        <%= link_to '新規登録', new_user_path, class:'btn btn-lg btn-light fw-bold border-dark' %>
+        <%= link_to 'ログイン', login_path, class:'btn btn-lg btn-light fw-bold border-dark' %>
+      <% end %>
     </p>
   </main>
 </div>

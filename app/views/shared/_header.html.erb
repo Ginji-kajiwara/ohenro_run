@@ -14,19 +14,22 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">マイページ</a>
+                <%= link_to "ログアウト", logout_path, method: :delete %>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">現在地</a>
+                <%= link_to "マイページ" %>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">実績</a>
+                <%= link_to "現在地" %>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">利用規約</a>
+                <%= link_to "実績"  %>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">プライバシーポリシー</a>
+                <%= link_to "利用規約" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "プライバシーポリシー" %>
               </li>
             </ul>
           </div>
