@@ -1,0 +1,44 @@
+<div class="container">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" id="tokushima-tab" data-toggle="tab" href="#tokushima">徳島県</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="kochi-tab" data-toggle="tab" href="#kochi">高知県</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="ehime-tab" data-toggle="tab" href="#ehime">愛媛県</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="kagawa-tab" data-toggle="tab" href="#kagawa">香川県</a>
+    </li>
+  </ul>
+
+  <div class="tab-content mt-3">
+    <div class="tab-pane fade show active" id="tokushima">
+      <div class="row">
+        <!-- カード形式でお寺情報を表示 -->
+        <% @tokushima_temples.each do |temple| %>
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title"><%= temple.name %></h5>
+                <p class="card-text"><%= temple.address %></p>
+                <!-- お寺の詳細ページへのリンク -->
+                <%= link_to "詳細を見る", temple_path(temple), class: "btn btn-primary" %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <!-- 高知県、愛媛県、香川県のタブとお寺情報も同様に記述 -->
+  </div>
+</div>
+
+  <!-- Bootstrap JS と jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

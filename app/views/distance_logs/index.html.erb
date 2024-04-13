@@ -8,13 +8,16 @@
       <% if distance_logs.present? %>
         <% distance_logs.each do |distance_log| %>
           <div>
-            <%= "🏃‍♀️#{distance_log.distance}km" %>
-            <%= button_to distance_log_path(distance_log), method: :delete, data: { confirm: '本当に削除しますか？' }, class: 'btn delete-button' do %>
-              <i class="fa-solid fa-trash"></i>
-            <% end %>
+            <%= "⭐️#{distance_log.distance}km" %>
+            <span class="delete-container">
+              <%= button_to distance_log_path(distance_log), method: :delete, data: { confirm: '本当に削除しますか？' }, class: 'btn delete-button' do %>
+                <i class="fa-solid fa-trash"></i>
+              <% end %>
+            </span>
           </div>
         <% end %>
       <% end %>
     </div>
   </div>
 <% end %>
+
