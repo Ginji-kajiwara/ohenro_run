@@ -27,10 +27,6 @@ class DistanceLogsController < ApplicationController
 
   private
 
-  def user_distance_logs
-    current_user.distance_logs
-  end
-
   def run_params
     params.require(:distance_log).permit(:distance, :start_time)
   end

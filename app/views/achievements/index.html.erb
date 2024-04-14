@@ -1,0 +1,111 @@
+<h1 class="text-center">実績</h1>
+<div class="container">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" id="tokushima-tab" data-toggle="tab" href="#tokushima">徳島県</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="kochi-tab" data-toggle="tab" href="#kochi">高知県</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="ehime-tab" data-toggle="tab" href="#ehime">愛媛県</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="kagawa-tab" data-toggle="tab" href="#kagawa">香川県</a>
+    </li>
+  </ul>
+
+  <div class="tab-content mt-3">
+    <div class="tab-pane fade show active" id="tokushima">
+      <div class="row">
+        <% if @tokushima_temples.blank? %>
+          <div class="col-md-12 mb-4">
+            <p>到達しているお寺がありません。頑張りましょう！</p>
+          </div>
+        <% else %>
+          <% @tokushima_temples.each do |temple| %>
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title"><%= temple.name %></h5>
+                  <p class="card-text"><%= temple.address %></p>
+                  <%= link_to "詳細を見る", class: "btn btn-primary" %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="kochi">
+      <div class="row">
+        <% if @kochi_temples.blank? %>
+          <div class="col-md-12 mb-4">
+            <p>到達しているお寺がありません。頑張りましょう！</p>
+          </div>
+        <% else %>
+          <% @kochi_temples.each do |temple| %>
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title"><%= temple.name %></h5>
+                  <p class="card-text"><%= temple.address %></p>
+                  <%= link_to "詳細を見る", class: "btn btn-primary" %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        <% end %>  
+      </div>
+    </div>
+    <div class="tab-pane fade" id="ehime">
+      <div class="row">
+        <% if @ehime_temples.blank? %>
+          <div class="col-md-12 mb-4">
+            <p>到達しているお寺がありません。頑張りましょう！</p>
+          </div>
+        <% else %>
+          <% @ehime_temples.each do |temple| %>
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title"><%= temple.name %></h5>
+                  <p class="card-text"><%= temple.address %></p>
+                  <%= link_to "詳細を見る", class: "btn btn-primary" %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="kagawa">
+      <div class="row">
+        <% if @kagawa_temples.blank? %>
+          <div class="col-md-12 mb-4">
+            <p>到達しているお寺がありません。頑張りましょう！</p>
+          </div>
+        <% else %>
+          <% @kagawa_temples.each do |temple| %>
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title"><%= temple.name %></h5>
+                  <p class="card-text"><%= temple.address %></p>
+                  <%= link_to "詳細を見る", class: "btn btn-primary" %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Bootstrap JS と jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
