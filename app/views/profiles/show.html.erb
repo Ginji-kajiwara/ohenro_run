@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">プロフィール</div>
+        <div class="card-body">
+          <p><strong>名前:</strong> <%= current_user.name %></p>
+          <p><strong>メールアドレス:</strong> <%= current_user.email %></p>
+          <p><strong>利用開始日:</strong> <%= current_user.created_at.strftime("%Y/%m/%d") %></p>
+          <%= link_to t('編集'), edit_profile_path, class: 'btn btn-success float-right' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
