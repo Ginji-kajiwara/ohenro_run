@@ -1,5 +1,4 @@
 class DistanceLogsController < ApplicationController
-
   def new
     @distance_log = DistanceLog.new(start_time: params[:start_time])
   end
@@ -11,7 +10,7 @@ class DistanceLogsController < ApplicationController
   def create
     @distance_log = current_user.distance_logs.build(run_params)
     if @distance_log.save
-      flash[:success] =  "ランニングを記録しました"
+      flash[:success] = 'ランニングを記録しました'
       redirect_to distance_logs_path(@distance_log)
     else
       render :new
@@ -21,7 +20,7 @@ class DistanceLogsController < ApplicationController
   def destroy
     @distance_log = DistanceLog.find(params[:id])
     @distance_log.destroy
-    flash[:success] =  "ランニング記録を削除しました"
+    flash[:success] = 'ランニング記録を削除しました'
     redirect_to distance_logs_path
   end
 
