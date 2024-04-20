@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   private
 
   def not_authenticated
-    redirect_to login_path, danger: "ログインしてください"
+    redirect_to login_path, danger: 'ログインしてください'
   end
 
   def user_distance_logs
@@ -18,5 +18,4 @@ class ApplicationController < ActionController::Base
   def user_remaining_distance
     Temple.last.distance_from_start - user_total_distance
   end
-
 end
