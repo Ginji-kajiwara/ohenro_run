@@ -11,4 +11,12 @@ class ApplicationController < ActionController::Base
     current_user.distance_logs
   end
 
+  def user_total_distance
+    user_distance_logs.sum(:distance)
+  end
+
+  def user_remaining_distance
+    Temple.last.distance_from_start - user_total_distance
+  end
+
 end

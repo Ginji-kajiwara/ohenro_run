@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'current_location/show'
   root 'pages#top'
 
   resources :distance_logs, only: %i[index new create show destroy]

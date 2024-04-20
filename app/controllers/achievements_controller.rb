@@ -9,9 +9,4 @@ class AchievementsController < ApplicationController
   def show
   end
 
-  private
-
-  def user_total_distance
-    user_distance_logs.sum(:distance)
-  end
 end
