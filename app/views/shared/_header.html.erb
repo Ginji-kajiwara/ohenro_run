@@ -1,6 +1,8 @@
 <header class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column"　style="position: fixed; top: 0; width: 100%;">
   <div class="d-flex justify-content-between">
-    <h3 class="float-md-start mb-0">OHENRO_RUN</h3>
+    <div class="float-md-start mb-0 ">
+    <%= link_to "OHENRO_RUN", "/" %>
+    </div>
     <nav class="nav nav-masthead justify-content-center">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
@@ -20,7 +22,7 @@
                 <%= link_to "マイページ" %>
               </li>
               <li class="nav-item">
-                <%= link_to "現在地" %>
+                <%= link_to "現在地", current_location_show_path %>
               </li>
               <li class="nav-item">
                 <%= link_to "実績", achievements_path  %>
