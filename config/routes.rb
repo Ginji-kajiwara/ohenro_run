@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'current_location/show'
   root 'pages#top'
   get '/policy', to: 'pages#policy'
+  get '/terms', to: 'pages#terms'
 
   resources :distance_logs, only: %i[index new create show destroy]
   resources :achievements, only: %i[index show]
