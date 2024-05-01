@@ -1,3 +1,5 @@
+<H1 class="text-center">ランニングの記録</h1>
+<p><i class="fa-solid fa-person-running"></i>ボタンから記録を追加できます</p>
 <%= month_calendar events: @distance_logs do |date, distance_logs| %>
   <div class="calendar-date-container">
     <span class="calendar-date"><%= date.day %></span>
@@ -8,10 +10,10 @@
       <% if distance_logs.present? %>
         <% distance_logs.each do |distance_log| %>
           <div>
-            <%= "⭐️#{distance_log.distance}km" %>
+            <%= "卍 #{distance_log.distance}km" %>
             <span class="delete-container">
               <%= button_to distance_log_path(distance_log), method: :delete, data: { confirm: '本当に削除しますか？' }, class: 'btn delete-button' do %>
-                <i class="fa-solid fa-trash"></i>
+                <i class="fa-solid fa-delete-left"></i>
               <% end %>
             </span>
           </div>
