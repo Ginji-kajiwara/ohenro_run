@@ -5,17 +5,25 @@
   <nav class="nav nav-masthead align-items-center">
     <ul class="navbar-nav d-flex flex-row">
       <li class="nav-item">
-        <%= link_to "現在地", current_location_show_path, class: "link me-3" %>
+        <%= link_to current_location_show_path, class: "link me-3" do %>
+          <i class="fa-solid fa-location-dot"></i> 現在地
+        <% end %>
       </li>
       <li class="nav-item">
-        <%= link_to "実績", achievements_path, class: "link me-3" %>
+        <%= link_to achievements_path, class: "link me-3" do %>
+        <i class="fa-solid fa-trophy"></i> 実績
+        <% end %>
       </li>
       <li class="nav-item">
-        <%= link_to "プロフィール", profile_path, class: "link me-3" %>
+        <%= link_to profile_path, class: "link me-3" do %>
+        <i class="fa-solid fa-user"></i> プロフィール
+        <% end %>
       </li>
       <li class="nav-item">
         <% if logged_in? %>
-        <%= link_to "ログアウト", logout_path, method: :delete, class: "link" %>
+        <%= link_to logout_path, method: :delete, class: "link" do %>
+        <i class="fa-solid fa-right-from-bracket"></i> ログアウト
+        <% end %>
         <% end %>
       </li>
     </ul>

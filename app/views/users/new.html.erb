@@ -1,41 +1,25 @@
-
 <%= form_with model: @user, local: true, class: 'form-signin text-center' do |f| %>
-  <img class="mb-4" src="" alt="" width="72" height="72">
-  <h1 class="h3 mb-3 font-weight-normal">新規登録</h1>
-  <div class="form_container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="form-group">
-          <%= f.label :name %>
-          <%= f.text_field :name, class: 'form-control', placeholder: "Name" %>
-        </div>
-      </div>
-      <div class="col-md-12">
-        <div class="form-group">
-          <%= f.label :email %>
-          <%= f.email_field :email, class: 'form-control', placeholder: "Email" %>
-        </div>
-      </div>
-      <div class="col-md-12">
-        <div class="form-group test">
-          <%= f.label :password %>
-          <%= f.password_field :password, class: 'form-control', placeholder: "Password" %>
-        </div>
-      </div>
-      <div class="col-md-12">
-        <div class="form-group">
-          <%= f.label :password_confirmation %>
-          <%= f.password_field :password_confirmation, class: 'form-control', placeholder: "Password_confirmation" %>
-        </div>
-      </div>
-    </div>
+  <h1 class="h3 mb-3">新規登録</h1>
+  <div class="form-label-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control', placeholder: "Name" %>
   </div>
-  <div class="col-md-12">
-    <div class="form-group">
+  <div class="form-label-group">
+    <%= f.label :email %>
+    <%= f.email_field :email, class: 'form-control', placeholder: "Email" %>
+  </div>
+  <div class="form-label-group">
+    <%= f.label :password %>
+    <%= f.password_field :password, class: 'form-control', placeholder: "Password" %>
+  </div>
+  <div class="form-label-group">
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, class: 'form-control', placeholder: "Password_confirmation" %>
+  </div>
+  <div class="form-label-group">
     <%= f.submit '登録', class: 'btn btn-lg btn-primary btn-block' %>
-    </div>
-    <div class="form-group">
-    <%= link_to 'ログインページへ', login_path %>
-    </div>
+  </div>
+  <div class="form-label-group">
+    <%= link_to 'ログインページへ(登録済みの方)', login_path %>
   </div>
 <% end %>
