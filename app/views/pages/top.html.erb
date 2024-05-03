@@ -1,11 +1,10 @@
-<body class="text-center">
-
+<main class="px-3 text-center">
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  <main class="px-3">
+  <div class>
     <h1>OHENRO_RUN</h1>
     <%= image_tag 'image.png', class: 'img-fluid img-main' %>
-    <p class="lead">「お遍路」とは、約1200年前に弘法大師（空海）が修行した88の霊場をたどる巡礼のことです。</p>
-    <p class="lead"> これは日々のランニング・ウォーキングを記録し、お遍路を擬似体験できるサービスです。</p>
+    <p class="lead">「お遍路」とは、約1200年前に弘法大師（空海）が修行した四国88箇所の霊場をたどる巡礼のことです。</p>
+    <p class="lead"> これは日々のランニングを記録し、走った距離でお遍路を擬似体験できるサービスです。</p>
     <p class="lead">
       <% if current_user %>
         <%= link_to 'ランニングを記録する', distance_logs_path, class: 'btn btn-lg btn-light fw-bold border-dark' %>
@@ -14,8 +13,18 @@
         <%= link_to 'ログイン', login_path, class:'btn btn-lg btn-light fw-bold border-dark' %>
       <% end %>
     </p>
-  </main>
+  </div>
 </div>
-
-</body>
-</html>
+<div class="bg-offwhite">
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column ">
+    <h2 class="lh-lg">このアプリの使い方</h2>
+    <p class="lead">千里の道も一歩から！</p>
+    <p class="lead">その日に走った距離を記録しましょう</p>
+    <%= image_tag 'distance_log.png', class: 'img-fluid img-second' %>
+  </div>
+</div>
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column ">
+  <p class="lead lh-lg">走った距離だけお遍路が進行します</p>
+  <%= image_tag 'current_location.png', class: 'img-fluid img-second' %>
+  <p class="lead lh-lg">ランニングを継続して、８８ヶ所全ての巡礼を目指しましょう！</p>
+</div>
