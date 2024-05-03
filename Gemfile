@@ -38,6 +38,7 @@ gem 'rubocop', require: false
 gem 'rubocop-rails', require: false
 
 gem 'dotenv-rails'
+gem 'rails-i18n'
 gem 'simple_calendar'
 
 group :development, :test do

@@ -2,21 +2,76 @@
 @import 'font-awesome';
 @import "simple_calendar";
 
+@font-face {
+  font-family: "kleeone";
+  src: url('assets/KleeOne-Regular.ttf');
+}
+
 .img-main {
   width: 400px;
   height: 300px;
 }
 
-.form_container {
-  max-width:600px;
-  margin:0 auto;
-  text-align:left;
-  -webkit-border-radius:6px;
-  -moz-border-radius:6px;
-  border-radius:6px;
-}
-
 .delete-container {
   display: inline-block;
   margin-left: 10px;
+}
+
+.color-main {
+  background-color: #99CC99;
+}
+
+.link {
+  text-decoration: none;
+  color: white ; 
+}
+
+.link-main {
+  text-decoration: none;
+  color: white ; 
+  font-size: x-large;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "kleeone";
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.map-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#map {
+  height: 70vh; 
+  max-width: 700px;
+}
+
+#info-container {
+  font-size: x-large;
+  text-align: center;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 420px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-label-group {
+  position: relative;
+  margin-bottom: 1rem;
 }

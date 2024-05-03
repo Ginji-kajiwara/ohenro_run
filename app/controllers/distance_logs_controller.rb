@@ -10,8 +10,8 @@ class DistanceLogsController < ApplicationController
   def create
     @distance_log = current_user.distance_logs.build(run_params)
     if @distance_log.save
-      flash[:success] = 'ランニングを記録しました'
-      redirect_to distance_logs_path(@distance_log)
+      flash[:success] = 'ランニングを記録しました！ ナイスラン！'
+      redirect_to current_location_show_path(@distance_log)
     else
       render :new
     end

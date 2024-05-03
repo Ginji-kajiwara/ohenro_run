@@ -1,42 +1,31 @@
-<header class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column"　style="position: fixed; top: 0; width: 100%;">
-  <div class="d-flex justify-content-between">
-    <div class="float-md-start mb-0 ">
-    <%= link_to "OHENRO_RUN", "/" %>
-    </div>
-    <nav class="nav nav-masthead justify-content-center">
-      <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-          <i class="fas fa-bars"></i>
-        </button>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">メニュー</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
-                <%= link_to "ログアウト", logout_path, method: :delete %>
-              </li>
-              <li class="nav-item">
-                <%= link_to "プロフィール", profile_path %>
-              </li>
-              <li class="nav-item">
-                <%= link_to "現在地", current_location_show_path %>
-              </li>
-              <li class="nav-item">
-                <%= link_to "実績", achievements_path  %>
-              </li>
-              <li class="nav-item">
-                <%= link_to "利用規約", terms_path %>
-              </li>
-              <li class="nav-item">
-                <%= link_to "プライバシーポリシー", policy_path %>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
+<header class="color-main d-flex w-100 p-3 mx-auto justify-content-between">
+  <div>
+    <%= link_to "OHENRO_RUN", "/", class: "link-main" %>
   </div>
+  <nav class="nav nav-masthead align-items-center">
+    <ul class="navbar-nav d-flex flex-row">
+      <li class="nav-item">
+        <%= link_to current_location_show_path, class: "link me-3" do %>
+          <i class="fa-solid fa-location-dot"></i> 現在地
+        <% end %>
+      </li>
+      <li class="nav-item">
+        <%= link_to achievements_path, class: "link me-3" do %>
+        <i class="fa-solid fa-trophy"></i> 実績
+        <% end %>
+      </li>
+      <li class="nav-item">
+        <%= link_to profile_path, class: "link me-3" do %>
+        <i class="fa-solid fa-user"></i> プロフィール
+        <% end %>
+      </li>
+      <li class="nav-item">
+        <% if logged_in? %>
+        <%= link_to logout_path, method: :delete, class: "link" do %>
+        <i class="fa-solid fa-right-from-bracket"></i> ログアウト
+        <% end %>
+        <% end %>
+      </li>
+    </ul>
+  </nav>
 </header>

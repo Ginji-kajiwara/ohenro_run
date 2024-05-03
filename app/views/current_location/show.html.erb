@@ -1,36 +1,20 @@
 <div data-turbolinks="false">
-<h1 class="text-center">現在地</h1>
+  <h1 class="text-center">現在地</h1>
 
-<div id="map-container">
-  <div id="map"></div>
-  <div id="info-container">
-    <div id="info">
-      <p id="distance">進んだ距離: <%= "#{@total_distance}" %>km</p>
-      <p id="remaining-distance">残りの距離: <%= "#{@remaining_distance}" %> km</p>
+  <div class="map-container">
+    <!-- 地図を表示するdiv -->
+    <div id="map" class="col-md-6"></div>
+    <!-- 情報を表示するdiv -->
+    <div id="info-container" class="col-md-6">
+      <div id="info">
+        <p>総走行距離: <%= "#{@total_distance}" %>km</p>
+        <p>残りの距離: <%= "#{@remaining_distance}" %> km</p>
+        <p>次の札所まで: <%= "#{@next_temple_distance}" %> km</p>
+        <p class="lead"><%= link_to 'ランニングを記録する', distance_logs_path, class: 'btn btn-lg btn-light fw-bold border-dark' %></p>
+      </div>
     </div>
   </div>
 </div>
-
-
-<style>
-#map-container {
-  display: flex;
-  margin-left: 20px;
-}
-
-#map {
-  height: 450px;
-  width: 600px;
-}
-
-#info-container {
-  margin-left: 20px;
-}
-
-#info {
-  margin-bottom: 10px;
-}
-</style>
 
 <script>
 let map
@@ -44,7 +28,7 @@ function initMap(){
   });
 
   codeAddress('<%= @address %>');
-  
+
   function codeAddress(address) {
     geocoder.geocode({'address': address}, function(results, status) {
       if (status === 'OK') {
