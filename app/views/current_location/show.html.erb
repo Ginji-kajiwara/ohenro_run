@@ -1,60 +1,60 @@
-<div data-turbolinks="false">
   <h1 class="text-center">現在地</h1>
 
   <div class="map-container">
-    <!-- 地図を表示するdiv -->
-    <div id="map" class="col-md-6"></div>
-    <!-- 情報を表示するdiv -->
+    <div id="map" class="col-md-6 current-location-map"></div>
     <div id="info-container" class="col-md-6">
       <div id="info">
-        <p>総走行距離: <%= "#{@total_distance}" %>km</p>
-        <p>残りの距離: <%= "#{@remaining_distance}" %> km</p>
-        <p>次の札所まで: <%= "#{@next_temple_distance}" %> km</p>
+        <p>総走行距離: <%= number_with_precision(@total_distance, precision: 1) %>km</p>
+        <p>残りの距離: <%= number_with_precision(@remaining_distance, precision: 1) %>km</p>
+        <p>次の札所まで: <%= number_with_precision(@next_temple_distance, precision: 1) %>km</p>
         <p class="lead"><%= link_to 'ランニングを記録する', distance_logs_path, class: 'btn btn-lg btn-light fw-bold border-dark' %></p>
       </div>
     </div>
   </div>
-</div>
 
-<script>
-let map
-
-function initMap(){
-  geocoder = new google.maps.Geocoder()
-
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 33.6027, lng: 133.4230},
-    zoom: 8,
-  });
-
-  startLatLng = {lat: 34.15968435218265, lng: 134.5025381993579};
-  markerIconURL = "<%= asset_path('start.png') %>";
-  startMarker = new google.maps.Marker({
-    position: startLatLng,
-    map: map,
-    icon: {
-      url: markerIconURL,
-      scaledSize: new google.maps.Size(40, 40)
-    },
-    title: 'スタート地点',
-  });
-
-  codeAddress('<%= @address %>');
-
-  function codeAddress(address) {
-    geocoder.geocode({'address': address}, function(results, status) {
-      if (status === 'OK') {
-        marker = new google.maps.Marker({
-          map: map,
-          position: results[0].geometry.location
-        });
-      } else {
-        alert('該当する結果がありませんでした：' + status);
-      }
-    });
-  }
-}
-
-</script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['MAPS_API_KEY'] %>&callback=initMap" async defer></script>
+
+<script>
+  let map
+
+  function initMap() {
+    const geocoder = new google.maps.Geocoder()
+
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: { lat: 33.6027, lng: 133.4230 },
+      zoom: 8,
+      mapId: 'MAP_ID'
+    });
+
+    const startLatLng = { lat: 34.15968435218265, lng: 134.5025381993579 };
+    const markerIconURL = "<%= asset_path('start.png') %>";
+    const startMarker = new google.maps.Marker({
+      position: startLatLng,
+      map: map,
+      icon: {
+        url: markerIconURL,
+        scaledSize: new google.maps.Size(40, 40)
+      },
+      title: 'スタート地点',
+    });
+
+    codeAddress('<%= @address %>');
+
+    function codeAddress(address) {
+      geocoder.geocode({ 'address': address }, function (results, status) {
+        if (status === 'OK') {
+          const marker = new google.maps.Marker({
+            map: map,
+            position: results[0].geometry.location
+          });
+        } else {
+          alert('該当する結果がありませんでした：' + status);
+        }
+      });
+    }
+  }
+
+   document.addEventListener('DOMContentLoaded', initMap);
+
+</script>

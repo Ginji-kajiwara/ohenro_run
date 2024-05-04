@@ -60,9 +60,16 @@ main {
   margin-right: 20px;
 }
 
-#map {
+.current-location-map {
   height: 70vh; 
   max-width: 700px;
+}
+
+.temple-location-map {
+  height: 50vh; 
+  max-width: 700px;
+  margin: 0 auto;
+  display: block;
 }
 
 #info-container {

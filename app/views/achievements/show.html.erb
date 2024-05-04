@@ -1,2 +1,38 @@
-<h1>Achievements#show</h1>
-<p>Find me in app/views/achievements/show.html.erb</p>
+<div class="container text-center">
+  <h1>第<%= @temple.id %>番札所 <%= @temple.name %></h1>
+  <p class="lead">住所: <%= @temple.address %></p>
+
+  <div id="map" class="temple-location-map"></div>
+  <%= link_to "一覧へもどる", achievements_path, class: "btn btn-primary" %>
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['MAPS_API_KEY'] %>&callback=initMap" async defer></script>
+
+<script>
+  let map;
+
+  function initMap() {
+    const templeAddress = '<%= @temple.address %>';
+    const geocoder = new google.maps.Geocoder();
+
+    geocoder.geocode({ 'address': templeAddress }, function (results, status) {
+      if (status === 'OK') {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: results[0].geometry.location,
+          zoom: 13,
+          mapId: 'MAP_ID'
+        });
+
+        new google.maps.Marker({
+          map: map,
+          position: results[0].geometry.location,
+          title: '<%= @temple.name %>'
+        });
+      } else {
+        alert('ジオコーディングエラー：' + status);
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initMap);
+</script>

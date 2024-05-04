@@ -6,5 +6,7 @@ class AchievementsController < ApplicationController
     @kagawa_temples = Temple.where(prefectures: '香川県').where('distance_from_start <= ?', user_total_distance)
   end
 
-  def show; end
+  def show
+    @temple = Temple.find(params[:id])
+  end
 end
