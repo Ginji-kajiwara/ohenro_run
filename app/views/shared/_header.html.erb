@@ -2,30 +2,37 @@
   <div>
     <%= link_to "OHENRO_RUN", "/", class: "link-main" %>
   </div>
-  <nav class="nav nav-masthead align-items-center">
-    <ul class="navbar-nav d-flex flex-row">
-      <li class="nav-item">
-        <%= link_to current_location_show_path, class: "link me-3" do %>
-          <i class="fa-solid fa-location-dot"></i> 現在地
-        <% end %>
-      </li>
-      <li class="nav-item">
-        <%= link_to achievements_path, class: "link me-3" do %>
-        <i class="fa-solid fa-trophy"></i> 実績
-        <% end %>
-      </li>
-      <li class="nav-item">
-        <%= link_to profile_path, class: "link me-3" do %>
-        <i class="fa-solid fa-user"></i> プロフィール
-        <% end %>
-      </li>
-      <li class="nav-item">
-        <% if logged_in? %>
-        <%= link_to logout_path, method: :delete, class: "link" do %>
-        <i class="fa-solid fa-right-from-bracket"></i> ログアウト
-        <% end %>
-        <% end %>
-      </li>
-    </ul>
+  <nav class="nav navbar navbar-expand-md nav-masthead">
+    <div class="container-fluid d-flex justify-content-end">
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars link me-3"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto flex-md-row">
+          <li class="nav-item">
+            <%= link_to current_location_show_path, class: "link me-3" do %>
+              <i class="fa-solid fa-location-dot"></i> 現在地
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to achievements_path, class: "link me-3" do %>
+            <i class="fa-solid fa-trophy"></i> 実績
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to profile_path, class: "link me-3" do %>
+            <i class="fa-solid fa-user"></i> プロフィール
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <% if logged_in? %>
+            <%= link_to logout_path, method: :delete, class: "link" do %>
+            <i class="fa-solid fa-right-from-bracket"></i> ログアウト
+            <% end %>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
 </header>
