@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CurrentLocationController < ApplicationController
   def show
     @total_distance = user_total_distance

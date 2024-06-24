@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 temples_data = [
   { name: '極楽寺', distance_from_start: 0, prefectures: '徳島県', address: '徳島県鳴門市大麻町板東字塚鼻１２６', description: '' },
   { name: '極楽寺', distance_from_start: 1.4, prefectures: '徳島県', address: '徳島県鳴門市大麻町檜段の上１２', description: '' },
