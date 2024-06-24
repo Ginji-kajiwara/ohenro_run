@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class DistanceLogsController < ApplicationController
   def new
     @distance_log = DistanceLog.new(start_time: params[:start_time])

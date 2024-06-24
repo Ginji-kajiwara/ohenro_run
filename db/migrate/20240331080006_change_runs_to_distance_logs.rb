@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ChangeRunsToDistanceLogs < ActiveRecord::Migration[6.1]
   def change
     rename_table :runs, :distance_logs

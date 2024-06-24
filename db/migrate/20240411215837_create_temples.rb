@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateTemples < ActiveRecord::Migration[6.1]
   def change
     create_table :temples do |t|

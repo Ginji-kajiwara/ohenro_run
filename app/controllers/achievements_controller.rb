@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AchievementsController < ApplicationController
   def index
     @tokushima_temples = Temple.where(prefectures: '徳島県').where('distance_from_start <= ?', user_total_distance)

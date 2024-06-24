@@ -1,8 +1,12 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
-  get 'current_location/show'
   root 'pages#top'
+  get 'current_location/show'
   get '/policy', to: 'pages#policy'
   get '/terms', to: 'pages#terms'
+  get 'auth/:provider/callback', to: 'user_sessions#google_auth'
+  get 'auth/failure', to: redirect('/')
 
   resources :distance_logs, only: %i[index new create show destroy]
   resources :achievements, only: %i[index show]

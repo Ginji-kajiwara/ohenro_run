@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class DistanceLog < ApplicationRecord
   belongs_to :user
 
