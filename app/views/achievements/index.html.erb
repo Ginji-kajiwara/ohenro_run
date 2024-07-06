@@ -26,6 +26,9 @@
           <% @tokushima_temples.each do |temple| %>
             <div class="col-md-4 mb-4">
               <div class="card">
+                <% if temple.photos.present? %>
+                  <%= image_tag temple.photos.first, class: "card-img-top" %>
+                <% end %>
                 <div class="card-body">
                   <h5 class="card-title"><%= temple.name %></h5>
                   <p class="card-text"><%= temple.address %></p>
@@ -47,6 +50,9 @@
           <% @kochi_temples.each do |temple| %>
             <div class="col-md-4 mb-4">
               <div class="card">
+                <% if temple.photos.present? %>
+                  <%= image_tag temple.photos.first, class: "card-img-top" %>
+                <% end %>
                 <div class="card-body">
                   <h5 class="card-title"><%= temple.name %></h5>
                   <p class="card-text"><%= temple.address %></p>
@@ -68,6 +74,9 @@
           <% @ehime_temples.each do |temple| %>
             <div class="col-md-4 mb-4">
               <div class="card">
+                <% if temple.photos.present? %>
+                  <%= image_tag temple.photos.first, class: "card-img-top" %>
+                <% end %>
                 <div class="card-body">
                   <h5 class="card-title"><%= temple.name %></h5>
                   <p class="card-text"><%= temple.address %></p>
@@ -89,6 +98,9 @@
           <% @kagawa_temples.each do |temple| %>
             <div class="col-md-4 mb-4">
               <div class="card">
+                <% if temple.photos.present? %>
+                  <%= image_tag temple.photos.first, class: "card-img-top" %>
+                <% end %>
                 <div class="card-body">
                   <h5 class="card-title"><%= temple.name %></h5>
                   <p class="card-text"><%= temple.address %></p>
