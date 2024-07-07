@@ -93,11 +93,14 @@ GEM
       dotenv (= 2.8.1)
       railties (>= 3.2)
     erubi (1.12.0)
+    event_stream_parser (1.0.0)
     execjs (2.9.1)
     faraday (2.8.1)
       base64
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
+    faraday-multipart (1.0.4)
+      multipart-post (~> 2)
     faraday-net_http (3.0.2)
     ffi (1.16.3)
     font-awesome-sass (6.5.1)
@@ -139,6 +142,7 @@ GEM
     minitest (5.22.3)
     msgpack (1.7.2)
     multi_xml (0.6.0)
+    multipart-post (2.4.1)
     net-imap (0.3.7)
       date
       net-protocol
@@ -252,6 +256,10 @@ GEM
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 1.33.0, < 2.0)
+    ruby-openai (7.1.0)
+      event_stream_parser (>= 0.3.0, < 2.0.0)
+      faraday (>= 1)
+      faraday-multipart (>= 1)
     ruby-progressbar (1.13.0)
     ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
@@ -345,6 +353,7 @@ DEPENDENCIES
   rails-i18n
   rubocop
   rubocop-rails
+  ruby-openai
   sass-rails (>= 6)
   selenium-webdriver (>= 4.0.0.rc1)
   simple_calendar
