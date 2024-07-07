@@ -9,6 +9,16 @@
         <p>次の札所まで: <%= number_with_precision(@next_temple_distance, precision: 1) %>km</p>
         <p class="lead"><%= link_to 'ランニングを記録する', distance_logs_path, class: 'btn btn-lg btn-light fw-bold border-dark' %></p>
       </div>
+      <div class="memory">
+        <div class="card">
+          <div class="card-header">
+            旅の思い出
+          </div>
+          <div class="card-body">
+            <p class="card-text"><%= @memory.present? ? @memory : "思い出がありません。" %></p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 

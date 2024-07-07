@@ -39,12 +39,13 @@ gem 'rubocop', require: false
 gem 'rubocop-rails', require: false
 
 gem 'dotenv-rails'
+gem 'httparty'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-rails_csrf_protection'
 gem 'rails-i18n'
+gem 'ruby-openai'
 gem 'simple_calendar'
-gem 'httparty'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
