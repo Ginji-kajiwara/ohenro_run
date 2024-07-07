@@ -40,6 +40,7 @@ gem 'rubocop-rails', require: false
 
 gem 'dotenv-rails'
 gem 'httparty'
+gem 'meta-tags'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-rails_csrf_protection'
