@@ -6,7 +6,7 @@ class OpenaiService
   end
 
   def generate_memory(location)
-    prompt = "あなたはお遍路を行っています。#{location}の近くに到達しました。到達地点付近で仮想の思い出を50文字以内で作成してください。"
+    prompt = "あなたはお遍路を行っています。#{location}の近くに到達しました。到達地点付近のスポットを交えて、仮想の思い出を50文字以内で作成してください。"
     response = @client.chat(
       parameters: {
         model: 'gpt-4',
