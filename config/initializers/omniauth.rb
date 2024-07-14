@@ -6,3 +6,15 @@ Rails.application.config.middleware.use OmniAuth::Builder do
     redirect_uri: 'https://www.ohenro-running.com/auth/google_oauth2/callback'
   }
 end
+
+OmniAuth.config.on_failure = Proc.new { |env|
+  message_key = env['omniauth.error.type']
+  error = env['omniauth.error']
+  strategy = env['omniauth.strategy']
+
+  Rails.logger.error("OmniAuth error: #{message_key}")
+  Rails.logger.error("OmniAuth error: #{error.inspect}")
+  Rails.logger.error("OmniAuth strategy: #{strategy.inspect}")
+
+  OmniAuth::FailureEndpoint.new(env).redirect_to_failure
+}
