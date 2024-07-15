@@ -13,8 +13,10 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       flash[:success] = 'ユーザー登録が完了しました'
       redirect_to current_location_show_path
+      Rails.logger.info("User saved successfully: #{user.inspect}")
     else
       render :new
+      Rails.logger.error("User save failed: #{user.errors.full_messages.join(", ")}")
     end
   end
 

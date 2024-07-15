@@ -44,6 +44,7 @@ class UserSessionsController < ApplicationController
     redirect_to root_path, notice: 'Googleアカウントでログインしました'
   rescue StandardError => e
     Rails.logger.error("Error during Google authentication: #{e.message}")
+    Rails.logger.error("Auth Object: #{auth.inspect}")
     Rails.logger.error(e.backtrace.join("\n"))
     redirect_to root_path, alert: 'ログインに失敗しました'
   end
