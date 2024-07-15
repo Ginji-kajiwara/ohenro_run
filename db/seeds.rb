@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 temples_data = [
-  { name: '極楽寺', distance_from_start: 0, prefectures: '徳島県', address: '徳島県鳴門市大麻町板東字塚鼻１２６', description: '' },
+  { name: '霊山寺', distance_from_start: 0, prefectures: '徳島県', address: '徳島県鳴門市大麻町板東字塚鼻１２６', description: '' },
   { name: '極楽寺', distance_from_start: 1.4, prefectures: '徳島県', address: '徳島県鳴門市大麻町檜段の上１２', description: '' },
   { name: '金泉寺', distance_from_start: 4, prefectures: '徳島県', address: '板野郡板野町大寺亀山下６６', description: '' },
   { name: '大日寺', distance_from_start: 9, prefectures: '徳島県', address: '板野郡板野町黒谷字居内５', description: '' },
