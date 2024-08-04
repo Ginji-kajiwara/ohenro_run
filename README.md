@@ -44,7 +44,7 @@ GoogleMapでおおよその位置と現在地付近での思い出を仮想生�
 
 
 ### 実績表示（御朱印帳）
-<kbd><img src="https://i.gyazo.com/cd777845eead9ee3992093b87ffc8443.gif" ></kbd>
+<kbd><img src="https://i.gyazo.com/3207c62820b73e2a84071123a45dff14.jpg" ></kbd>
 到達したお寺の情報を閲覧することができます。
 
 
