@@ -29,18 +29,24 @@ ChatGPTを使用して、到達した地域周辺で擬似的な思い出を作�
 ## 主な機能
 ### 会員登録・ログイン（googleアカウントによるソーシャルログイン）
 <kbd><img src="https://i.gyazo.com/bbdb985b3d8d0ae595724d25a137f658.png" /></kbd>
+メールアドレスとパスワードを使用して会員登録とログインを行えます。
+Googleアカウントを使用したソーシャルログインも可能です。
+
 
 ### 走行距離の記録
-<kbd><img src="" /></kbd>
+<kbd><img src="https://i.gyazo.com/f7106eebf8c4a9d653d3d4cfc8247a70.png" /></kbd>
+カレンダー表示で走った距離を記録できます。
 
-### 位置情報表示
-<kbd><img src="" /></kbd>
+
+### 位置情報表示・思い出生成
+<kbd><img src="https://i.gyazo.com/b23a992dc69b11d5c6cbeb0c4cc8fb1f.png" /></kbd>
+GoogleMapでおおよその位置と現在地付近での思い出を仮想生成します。
+
 
 ### 実績表示（御朱印帳）
-<kbd><img src="" /></kbd>
+<kbd><img src="https://i.gyazo.com/cd777845eead9ee3992093b87ffc8443.gif" ></kbd>
+到達したお寺の情報を閲覧することができます。
 
-### 思い出生成機能
-<kbd><img src="" /></kbd>
 
 
 ## 使用技術
@@ -51,6 +57,7 @@ ChatGPTを使用して、到達した地域周辺で擬似的な思い出を作�
 | データベース | PostgreSQL |
 | 認証 | Sorcery |
 | インフラ | HEROKU |
+| Web API | OpenAI API ・ Google API |
 
 ## 画面遷移図URL
 https://www.figma.com/file/iHe6eMo0UjlzPVOaaAWrEc/OHENRO_RUN-%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7?type=design&mode=dev&t=lWnH3WirYv3GAy54-1
